@@ -1,0 +1,25 @@
+{
+  "name": "gdq-schedule-bot",
+  "version": "1.0.0",
+  "description": "Scrapes GamesDoneQuick Schedule and put it into a Google Calendar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrMysterius/GDQ-Schedule-Bot.git"
+  },
+  "author": "MrMysterius",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrMysterius/GDQ-Schedule-Bot/issues"
+  },
+  "homepage": "https://github.com/MrMysterius/GDQ-Schedule-Bot#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
+    "googleapis": "^39.2.0",
+    "puppeteer": "^5.2.1"
+  }
+}
