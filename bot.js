@@ -219,10 +219,10 @@ module.exports = class Bot {
                 catch {}
             })
 
-            insertOrUpdate(calendarEntries, convertedEvents, calendar, config);
+            insertOrUpdate(calendarEntries, convertedEvents, calendar, config, event.event);
         })
 
-        function insertOrUpdate(calendarEntries, convertedEvents, googleCalendar, config) {
+        function insertOrUpdate(calendarEntries, convertedEvents, googleCalendar, config, eventName) {
             function toDateNumber({year, month, day, hour, minute}) {
                 month++;
                 let strings = {
@@ -235,10 +235,10 @@ module.exports = class Bot {
                 return parseInt(`${strings.year}${strings.month}${strings.day}${strings.hour}${strings.minute}`);
             }
 
-            function eventDesciptionGen(id, game, category, runners, hosts, setupLength) {
+            function eventDesciptionGen(id, game, category, runners, hosts, setupLength, event) {
                 // https://www.google.com/search?q=${host.split(' ').join('+')}
                 // https://www.google.com/search?q=${runner.split(' ').join('+')}
-                return `<b>GAME:</b> ${game}<br><b>CATEGORY:</b> ${category}<br><b>RUNNER:</b> ${runners}<br><b>HOST:</b> ${hosts}<br><b>SETUPLENGTH:</b> ${setupLength}<br><br>[ID:${id}]`;
+                return `<b>GAME:</b> ${game}<br><b>CATEGORY:</b> ${category}<br><b>RUNNER:</b> ${runners}<br><b>HOST:</b> ${hosts}<br><b>SETUPLENGTH:</b> ${setupLength}<br><br><a href="https://gamesdonequick.com/schedule">[ID:${id}] - Event ${event}</a>`;
             }
 
             let now = new Date();
@@ -281,7 +281,7 @@ module.exports = class Bot {
                 let isFound = false;
                 calendarEntries.forEach(calendarEvent=>{
                     if (calendarEvent.gameEventID==scrapedEvent.id.toString()) {
-                        if (calendarEvent.startDateNumber != scrapedEvent.startTime.dateNumber || calendarEvent.endDateNumber != scrapedEvent.endTime.dateNumber || calendarEvent.description != eventDesciptionGen(scrapedEvent.id, scrapedEvent.game, scrapedEvent.category, scrapedEvent.runner, scrapedEvent.host, scrapedEvent.setupLength.join(':'))) {
+                        if (calendarEvent.startDateNumber != scrapedEvent.startTime.dateNumber || calendarEvent.endDateNumber != scrapedEvent.endTime.dateNumber || calendarEvent.description != eventDesciptionGen(scrapedEvent.id, scrapedEvent.game, scrapedEvent.category, scrapedEvent.runner, scrapedEvent.host, scrapedEvent.setupLength.join(':'), eventName)) {
                             update.push({s: scrapedEvent, c: calendarEvent});
                         }
                         isFound = true;
@@ -314,7 +314,7 @@ module.exports = class Bot {
                             end: {
                                 dateTime: ins.endTime.timestamp+'.00+02:00'
                             },
-                            description: eventDesciptionGen(ins.id, ins.game, ins.category, ins.runner, ins.host, ins.setupLength.join(':'))
+                            description: eventDesciptionGen(ins.id, ins.game, ins.category, ins.runner, ins.host, ins.setupLength.join(':'), eventName)
                         }
                     }
                     googleCalendar.events.insert(insertObj, (err, res) => {
@@ -345,7 +345,7 @@ module.exports = class Bot {
                             end: {
                                 dateTime: u.s.endTime.timestamp+'.00+02:00'
                             },
-                            description: eventDesciptionGen(u.s.id, u.s.game, u.s.category, u.s.runner, u.s.host, u.s.setupLength.join(':'))
+                            description: eventDesciptionGen(u.s.id, u.s.game, u.s.category, u.s.runner, u.s.host, u.s.setupLength.join(':'), eventName)
                         }
                     }
                     googleCalendar.events.update(insertObj, (err, res) => {
