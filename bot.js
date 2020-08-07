@@ -6,21 +6,21 @@ module.exports = class Bot {
     constructor (auth) {
         let ONE_MINUTE = 60000;
 
-        this.config = require('./config.json');
+        const config = require('./config.json');
 
-        this.calendar = google.calendar({version: 'v3', auth});
+        const calendar = google.calendar({version: 'v3', auth});
         
-        this.intervalID = setInterval(this.checkEntrys, ONE_MINUTE * 5);
-        this.checkEntrys();
+        this.intervalID = setInterval(this.checkEntrys, ONE_MINUTE * 5, config, calendar);
+        this.checkEntrys(config, calendar);
     }
-    async checkEntrys() {
+    async checkEntrys(config, calendar) {
         console.log('STARTING A SCRAPE');
         console.time('complete');
         const pupBrowser = await puppeteer.launch();
         const page = await pupBrowser.newPage();
         console.log('LOADING PAGE');
         console.time('load');
-        await page.goto(this.config.schedule_url, {waitUntil: 'networkidle2', timeout: 60000});
+        await page.goto(config.schedule_url, {waitUntil: 'networkidle2', timeout: 60000});
         console.log('LOADED PAGE');
         console.timeEnd('load');
 
@@ -204,7 +204,7 @@ module.exports = class Bot {
 
         let calendarEntries = [];
 
-        this.calendar.events.list({
+        calendar.events.list({
             calendarId: 'ou7502s2f9tmmqqv4np8h9sn08@group.calendar.google.com',
             timeMin: (new Date()).toISOString(),
             maxResults: 250,
@@ -219,7 +219,7 @@ module.exports = class Bot {
                 catch {}
             })
 
-            insertOrUpdate(calendarEntries, convertedEvents, this.calendar, this.config);
+            insertOrUpdate(calendarEntries, convertedEvents, calendar, config);
         })
 
         function insertOrUpdate(calendarEntries, convertedEvents, googleCalendar, config) {
