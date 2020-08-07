@@ -17,4 +17,4 @@ This the config.json example that is needed!
 }
 ```
 
-<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%236b8eff&amp;ctz=Europe%2FBerlin&amp;src=b3U3NTAyczJmOXRtbXFxdjRucDhoOXNuMDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%233F51B5&amp;title&amp;showNav=1&amp;mode=AGENDA&amp;hl=en&amp;showCalendars=0&amp;showTabs=1&amp;showPrint=0&amp;showDate=0" style="border:solid 1px #777" width="300" height="400" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%236b8eff&amp;ctz=Europe%2FBerlin&amp;src=b3U3NTAyczJmOXRtbXFxdjRucDhoOXNuMDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%233F51B5&amp;title&amp;showNav=1&amp;mode=AGENDA&amp;hl=en&amp;showCalendars=0&amp;showTabs=1&amp;showPrint=0&amp;showDate=0" style="border:solid 1px #777" width="400" height="600" frameborder="0" scrolling="no"></iframe>
