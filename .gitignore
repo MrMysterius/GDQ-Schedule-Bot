@@ -107,3 +107,6 @@ dist
 credentials.json
 token.json
 config.json
+
+# Other Stuff
+website-screenshot.png
