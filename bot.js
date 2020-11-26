@@ -241,7 +241,7 @@ module.exports = class Bot {
       }
     );
 
-    setInterval(() => {
+    setTimeout(() => {
       if (!gotResponse) {
         if (this.responseCounter < 3) {
           this.responseCounter++;
@@ -250,7 +250,7 @@ module.exports = class Bot {
           insertOrUpdate(calendarEntries, convertedEvents, calendar, config, event.event);
         }
       }
-    });
+    }, 30000);
 
     function insertOrUpdate(calendarEntries, convertedEvents, googleCalendar, config, eventName) {
       function toDateNumber({ year, month, day, hour, minute }) {
