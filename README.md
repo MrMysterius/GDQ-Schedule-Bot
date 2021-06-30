@@ -1,8 +1,10 @@
-# GDQ-Schedule-Bot <a href="https://calendar.google.com/calendar/b/0?cid=b3U3NTAyczJmOXRtbXFxdjRucDhoOXNuMDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"><img src="https://img.shields.io/static/v1?label=Import%20Google%20Calendar&style=for-the-badge&color=blue&message=Click%20Here" /></a> [![CodeFactor](https://www.codefactor.io/repository/github/mrmysterius/gdq-schedule-bot/badge/master)](https://www.codefactor.io/repository/github/mrmysterius/gdq-schedule-bot/overview/master)
+# GDQ-Schedule-Bot [![CodeFactor](https://www.codefactor.io/repository/github/mrmysterius/gdq-schedule-bot/badge/master)](https://www.codefactor.io/repository/github/mrmysterius/gdq-schedule-bot/overview/master)
 
 Webscrapper for the GamesDoneQuick Schedule that is then turned into a google calendar
 
 ## Just adding the Calendar
+
+[![Import](https://img.shields.io/static/v1?label=Import%20Google%20Calendar&style=for-the-badge&color=blue&message=Click%20Here)](https://calendar.google.com/calendar/b/0?cid=b3U3NTAyczJmOXRtbXFxdjRucDhoOXNuMDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)
 
 You can just add the calendar to your own calendar [here](https://calendar.google.com/calendar/b/0?cid=b3U3NTAyczJmOXRtbXFxdjRucDhoOXNuMDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ).
 
