@@ -2,11 +2,15 @@
 
 Webscrapper for the GamesDoneQuick Schedule that is then turned into a google calendar
 
+## Just adding the Calendar
+
+You can just add the calendar to your own calendar [here](https://calendar.google.com/calendar/b/0?cid=b3U3NTAyczJmOXRtbXFxdjRucDhoOXNuMDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ).
+
 ## For own use
 
-It needs a credential.json file in the directory with google application credentials. You can just download these from google application creation itself.
+If you want to use it for yourself you need to make a `config.json` file and also add a `credentials.json` file into the root directory. The `credentials.json` file can be downloaded from the site where you make a google application (mainly for google calendar).
 
-## Config Example
+### Config Example
 
 This the config.json example that is needed!
 
