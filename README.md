@@ -1,4 +1,5 @@
-# GDQ-Schedule-Bot [![CodeFactor](https://www.codefactor.io/repository/github/mrmysterius/gdq-schedule-bot/badge/master)](https://www.codefactor.io/repository/github/mrmysterius/gdq-schedule-bot/overview/master)
+# GDQ-Schedule-Bot
+[![CodeFactor](https://www.codefactor.io/repository/github/mrmysterius/gdq-schedule-bot/badge/master)](https://www.codefactor.io/repository/github/mrmysterius/gdq-schedule-bot/overview/master)
 
 Webscrapper for the GamesDoneQuick Schedule that is then turned into a google calendar
 
