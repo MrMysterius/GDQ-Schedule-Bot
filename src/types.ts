@@ -9,3 +9,10 @@ export interface credentialsObject {
     redirect_uris: Array<string>;
   };
 }
+
+export interface config {
+  schedule_url: string;
+  calendar_id: string;
+}
+
+export interface scraper_rawEvent {}
