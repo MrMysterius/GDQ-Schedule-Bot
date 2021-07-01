@@ -20,6 +20,7 @@
   "homepage": "https://github.com/MrMysterius/GDQ-Schedule-Bot#readme",
   "dependencies": {
     "axios": "^0.21.1",
+    "chalk": "^4.1.1",
     "cheerio": "^1.0.0-rc.10",
     "googleapis": "^80.0.0",
     "puppeteer": "^5.2.1"
