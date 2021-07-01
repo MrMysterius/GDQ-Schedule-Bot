@@ -4,6 +4,7 @@ import * as readline from "readline";
 
 import { Credentials, OAuth2Client } from "google-auth-library";
 
+import chalk from "chalk";
 import { credentialsObject } from "./types";
 import { google } from "googleapis";
 
@@ -47,14 +48,14 @@ function getAccessToken(oAuth2Client: OAuth2Client, callback: Function) {
     scope: SCOPES,
   });
 
-  console.log("Authorize this app by visiting this url:", authUrl);
+  console.log(chalk.bgBlue.white.bold("Authorize this app by visiting this url:"), chalk.magenta(authUrl));
 
   const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
   });
 
-  rl.question("Enter the code from that page here: ", (code) => {
+  rl.question(chalk.bgRed.white.bold("Enter the code from that page here: "), (code) => {
     rl.close();
 
     oAuth2Client.getToken(code, (err, token) => {
@@ -64,7 +65,7 @@ function getAccessToken(oAuth2Client: OAuth2Client, callback: Function) {
 
       fs.writeFile(TOKEN_PATH, JSON.stringify(token), (err) => {
         if (err) return console.error(err);
-        console.log("Token stored to", TOKEN_PATH);
+        console.log(chalk.bgGreen.white("Token stored to"), chalk.yellow(TOKEN_PATH));
       });
 
       callback(oAuth2Client);
