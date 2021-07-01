@@ -110,3 +110,6 @@ config.json
 
 # Other Stuff
 website-screenshot.png
+
+# Build
+build/
