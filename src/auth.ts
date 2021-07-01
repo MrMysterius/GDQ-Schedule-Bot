@@ -12,7 +12,7 @@ const SCOPES = ["https://www.googleapis.com/auth/calendar", "https://www.googlea
 const CREDETIALS_PATH = path.join(__dirname, "../config/credentials.json");
 const TOKEN_PATH = path.join(__dirname, "../config/token.json");
 
-export async function getAuth() {
+export async function getAuth(): Promise<OAuth2Client> {
   return new Promise((resolve, reject) => {
     function returnAuth(auth: OAuth2Client) {
       if (auth) resolve(auth);
