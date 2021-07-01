@@ -17,9 +17,12 @@
   },
   "homepage": "https://github.com/MrMysterius/GDQ-Schedule-Bot#readme",
   "dependencies": {
-    "axios": "^0.19.2",
-    "cheerio": "^1.0.0-rc.3",
-    "googleapis": "^39.2.0",
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.10",
+    "googleapis": "^80.0.0",
     "puppeteer": "^5.2.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.3.5"
   }
 }
