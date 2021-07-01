@@ -8,8 +8,8 @@ import { google } from "googleapis";
 
 const SCOPES = ["https://www.googleapis.com/auth/calendar", "https://www.googleapis.com/auth/calendar.events"];
 
-const CREDETIALS_PATH = "../config/credentials.json";
-const TOKEN_PATH = "../config/token.json";
+const CREDETIALS_PATH = "./config/credentials.json";
+const TOKEN_PATH = "./config/token.json";
 
 export async function getAuth() {
   return new Promise((resolve, reject) => {
