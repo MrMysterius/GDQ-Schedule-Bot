@@ -1,4 +1,5 @@
 import * as fs from "fs";
+import * as path from "path";
 import * as readline from "readline";
 
 import { Credentials, OAuth2Client } from "google-auth-library";
@@ -8,8 +9,8 @@ import { google } from "googleapis";
 
 const SCOPES = ["https://www.googleapis.com/auth/calendar", "https://www.googleapis.com/auth/calendar.events"];
 
-const CREDETIALS_PATH = "./config/credentials.json";
-const TOKEN_PATH = "./config/token.json";
+const CREDETIALS_PATH = path.join(__dirname, "../config/credentials.json");
+const TOKEN_PATH = path.join(__dirname, "../config/token.json");
 
 export async function getAuth() {
   return new Promise((resolve, reject) => {
