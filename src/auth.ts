@@ -11,17 +11,18 @@ const SCOPES = ["https://www.googleapis.com/auth/calendar", "https://www.googlea
 const CREDETIALS_PATH = "../config/credentials.json";
 const TOKEN_PATH = "../config/token.json";
 
-async function getAuth() {
+export async function getAuth() {
   return new Promise((resolve, reject) => {
     function returnAuth(auth: OAuth2Client) {
       if (auth) resolve(auth);
       reject("No auth received");
     }
 
-    fs.readFile("credentials.json", (err, content) => {
+    fs.readFile(CREDETIALS_PATH, (err, content) => {
       if (err) {
         console.error("Couldn't load credentials.json file", err);
         reject("Couldn't load credentials.json file");
+        return;
       }
       authorize(JSON.parse(content.toString()), returnAuth);
     });
