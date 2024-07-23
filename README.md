@@ -3,6 +3,10 @@
 
 Webscrapper for the GamesDoneQuick Schedule that is then turned into a google calendar
 
+>[!WARNING]
+**THIS IS NOW A PUBLIC ARCHIVE, BECAUSE GAMES DONE QUICK UPDATED THEIR SCHEDULE PAGE LAYOUT, SO THIS IS DEFUNCT!!!**
+
+
 ## Just adding the Calendar
 
 [![Import](https://img.shields.io/static/v1?label=Import%20Google%20Calendar&style=for-the-badge&color=blue&message=Click%20Here)](https://calendar.google.com/calendar/b/0?cid=b3U3NTAyczJmOXRtbXFxdjRucDhoOXNuMDhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)
