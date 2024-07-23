@@ -1,11 +1,10 @@
+>[!WARNING]
+**THIS IS NOW A PUBLIC ARCHIVE, BECAUSE GAMES DONE QUICK UPDATED THEIR SCHEDULE PAGE LAYOUT, SO THIS IS DEFUNCT!!!**
+
 # GDQ-Schedule-Bot
 [![CodeFactor](https://www.codefactor.io/repository/github/mrmysterius/gdq-schedule-bot/badge/master)](https://www.codefactor.io/repository/github/mrmysterius/gdq-schedule-bot/overview/master)
 
 Webscrapper for the GamesDoneQuick Schedule that is then turned into a google calendar
-
->[!WARNING]
-**THIS IS NOW A PUBLIC ARCHIVE, BECAUSE GAMES DONE QUICK UPDATED THEIR SCHEDULE PAGE LAYOUT, SO THIS IS DEFUNCT!!!**
-
 
 ## Just adding the Calendar
 
